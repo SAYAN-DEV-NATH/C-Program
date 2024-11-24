@@ -19,7 +19,33 @@ int main()
         }
 
         int i = 0, j = 0, mx;
-        for
+        while (1)
+        {
+            if (j == n - 1)
+                break;
+
+            if (i == j)
+            {
+                if (a[i] < a[i + 1])
+                    mx = a[i + 1];
+                else
+                    mx = a[i];
+            }
+            else
+            {
+                if (mx < a[i + 1])
+                    mx = a[i + 1];
+            }
+            printf("%d ", mx);
+            i++;
+
+            if (i == n - 1)
+            {
+                j++;
+                i = j;
+            }
+        }
+        printf("\n");
     }
     return 0;
 }
